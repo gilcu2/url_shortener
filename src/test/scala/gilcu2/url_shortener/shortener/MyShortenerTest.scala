@@ -46,7 +46,7 @@ class MyShortenerTest extends AnyFlatSpec with GivenWhenThen with BeforeAndAfter
 
     And("retrieve the original")
     val retrievedUrl = Await.result(shortener.getOriginal(short),
-      FiniteDuration(10, MILLISECONDS)).get
+      FiniteDuration(1, SECONDS)).get
 
     Then("The value is the original")
     assert(retrievedUrl == url)
