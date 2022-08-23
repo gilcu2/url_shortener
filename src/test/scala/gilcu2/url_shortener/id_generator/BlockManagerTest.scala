@@ -120,8 +120,5 @@ class BlockManagerTest extends AsyncFlatSpec with GivenWhenThen with BeforeAndAf
       assert(newBlockIndex1 > firstBlockIndex2)
       assert(newBlockIndex2 == newBlockIndex1 + 1)
     }
-
   }
-
-
 }
