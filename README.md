@@ -1,8 +1,8 @@
-# Akka HTTP url shortener
+# Akka HTTP url gilcu2.url_shortener.shortener
 
 ## Objetive
 
-Design and implement a URL shortener HTTP service that fulfills the following criteria:
+Design and implement a URL gilcu2.url_shortener.shortener HTTP service that fulfills the following criteria:
 
 * Provides an HTTP API to:
   * Shorten a URL

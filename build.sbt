@@ -3,7 +3,7 @@ import sbt.librarymanagement.ConflictWarning
 enablePlugins(JavaAppPackaging)
 
 name := "url_shortener"
-organization := "com.github.gilcu2"
+organization := "gilcu2"
 version := "0.2.0"
 scalaVersion := "3.1.3"
 
