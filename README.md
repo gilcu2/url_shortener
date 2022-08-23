@@ -12,6 +12,19 @@ Design and implement a URL shortener HTTP service that fulfills the following cr
   * The ID of the shortened URL should be as short as possible (max. 8 characters long)
   * The long/shortened URL mapping needs to be persisted and shouldn't be lost after a backend service restart
 
+## Problem Specification
+Design and implement an URL shortener HTTP service that fulfills the following criteria:
+
+* Provides an HTTP API to:
+    * Shorten a URL
+    * Redirect to the long URL from the shortened URL
+* Shortened URL requirements:
+    * The ID of the shortened URL needs to be unique (across past and concurrent requests)
+    * The ID of the shortened URL should be as short as possible (max. 8 characters long)
+    * The long/shortened URL mapping needs to be persisted and shouldn't be lost after a backend service restart
+
+Which technologies you use and how you solve this problem is completely up to you.
+
 ## Proposal
 
 There are reported several methods for shorten urls. The basic ideas are:
@@ -90,20 +103,9 @@ Supposing 10^6 requests per day, the system can set a shortened live time of 2 m
 - Implement deployment
 - Implement scalable deployment
 - Security
-=======
-# Coding Challenge
-URL shortener HTTP service.
+- Cache docker images in test
 
-## Problem Specification
-Design and implement an URL shortener HTTP service that fulfills the following criteria:
 
-* Provides an HTTP API to:
-	* Shorten a URL
-	* Redirect to the long URL from the shortened URL
-* Shortened URL requirements:
-	* The ID of the shortened URL needs to be unique (across past and concurrent requests)
-	* The ID of the shortened URL should be as short as possible (max. 8 characters long)
-	* The long/shortened URL mapping needs to be persisted and shouldn't be lost after a backend service restart
 
-Which technologies you use and how you solve this problem is completely up to you.
+
 
