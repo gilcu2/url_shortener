@@ -104,6 +104,7 @@ Supposing 10^6 requests per day, the system can set a shortened live time of 2 m
 - Implement scalable deployment
 - Security
 - Cache docker images in test
+- Publish
 
 
 
