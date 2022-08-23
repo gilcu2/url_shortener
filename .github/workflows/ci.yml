@@ -30,8 +30,8 @@ jobs:
 
       - name: Set docker options
         run: |
-          - mkdir ~/docker_dir
-          - echo "DOCKER_OPTS="-g ~/docker_dir"" >> $GITHUB_ENV
+          mkdir ~/docker_dir
+          echo "DOCKER_OPTS="-g ~/docker_dir"" >> $GITHUB_ENV
 
       - name: Cache docker
         uses: actions/cache@v2
