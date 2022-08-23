@@ -1,6 +1,6 @@
 package gilcu2.url_shortener.http.routes
 
-import akka.http.scaladsl.model.StatusCodes._
+import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.model.headers.RawHeader
 import akka.http.scaladsl.server.{Directives, Route}
 import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport
@@ -15,8 +15,8 @@ case class GetOriginalRoute(shortener: Shortener)
     get {
       parameter("short") { short =>
         onSuccess(shortener.getOriginal(short)) {
-          case Some(url) => complete(url)
-          case None => complete(NotFound)
+          case Some(url) => redirect(url, StatusCodes.Found)
+          case None => complete(StatusCodes.NotFound)
         }
       }
     }
