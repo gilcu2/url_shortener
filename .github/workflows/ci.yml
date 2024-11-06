@@ -18,15 +18,11 @@ jobs:
         java: [ openjdk@1.21 ]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Checkout current branch (full)
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Setup Java and Scala
-        uses: olafurpg/setup-scala@v11
+      - uses: coursier/setup-action@v1
         with:
-          java-version: ${{ matrix.java }}
+          jvm: zulu:21.0.2
 
       #      - name: Set docker options
       #        run: |
