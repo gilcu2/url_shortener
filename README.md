@@ -12,6 +12,23 @@ Design and implement a URL shortener HTTP service that fulfills the following cr
   * The ID of the shortened URL should be as short as possible (max. 8 characters long)
   * The long/shortened URL mapping needs to be persisted and shouldn't be lost after a backend service restart
 
+## Requirements
+
+- java11
+- sbt
+  Before other steps:
+  docker-compose up # For start redis
+
+## Test
+
+sbt test
+
+## Run
+
+sbt run # In one terminal
+bin/post_url.sh http://example.com/lalala  # Get shortened url
+bin/get_original.sh \<shortened url>
+
 ## Proposal
 
 There are reported several methods for shorten urls. The basic ideas are:
