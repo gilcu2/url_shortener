@@ -1,6 +1,7 @@
 import sbt.librarymanagement.ConflictWarning
 
 enablePlugins(JavaAppPackaging)
+enablePlugins(DockerPlugin)
 
 name := "url_shortener"
 organization := "gilcu2"
@@ -8,8 +9,8 @@ version := "0.2.0"
 scalaVersion := "3.1.3"
 
 libraryDependencies ++= {
-  val akkaHttpV = "10.2.9"
-  val akkaV = "2.6.19"
+  val akkaHttpV = "10.2.10"
+  val akkaV = "2.6.21"
   val scalaTestV = "3.2.13"
   val circeV = "0.14.2"
   val akkaHttpCirceV = "1.39.2"

@@ -14,20 +14,30 @@ Design and implement a URL shortener HTTP service that fulfills the following cr
 
 ## Requirements
 
-- java11
+- java17
 - sbt
-  Before other steps:
-  docker-compose up # For start redis
+- docker-compose
+
+Before test or run:
+
+docker-compose up # For start redis in one terminal
 
 ## Test
+
+In other terminal:
 
 sbt test
 
 ## Run
 
-sbt run # In one terminal
-bin/post_url.sh http://example.com/lalala  # Get shortened url
-bin/get_original.sh \<shortened url>
+In one terminal:
+
+sbt run
+
+In other terminal:
+
+bin/post_url.sh http://example.com/lalala  # Get the short url printed out
+bin/get_original.sh \<short url>  # Print the original
 
 ## Proposal
 
