@@ -12,18 +12,32 @@ Design and implement a URL shortener HTTP service that fulfills the following cr
   * The ID of the shortened URL should be as short as possible (max. 8 characters long)
   * The long/shortened URL mapping needs to be persisted and shouldn't be lost after a backend service restart
 
-## Problem Specification
-Design and implement an URL shortener HTTP service that fulfills the following criteria:
+## Requirements
 
-* Provides an HTTP API to:
-    * Shorten a URL
-    * Redirect to the long URL from the shortened URL
-* Shortened URL requirements:
-    * The ID of the shortened URL needs to be unique (across past and concurrent requests)
-    * The ID of the shortened URL should be as short as possible (max. 8 characters long)
-    * The long/shortened URL mapping needs to be persisted and shouldn't be lost after a backend service restart
+- java17
+- sbt
+- docker-compose
 
-Which technologies you use and how you solve this problem is completely up to you.
+Before test or run:
+
+docker-compose up # For start redis in one terminal
+
+## Test
+
+In other terminal:
+
+sbt test
+
+## Run
+
+In one terminal:
+
+sbt run
+
+In other terminal:
+
+bin/post_url.sh http://example.com/lalala  # Get the short url printed out
+bin/get_original.sh \<short url>  # Print the original
 
 ## Proposal
 
@@ -103,10 +117,3 @@ Supposing 10^6 requests per day, the system can set a shortened live time of 2 m
 - Implement deployment
 - Implement scalable deployment
 - Security
-- Cache docker images in test
-- Publish
-
-
-
-
-
