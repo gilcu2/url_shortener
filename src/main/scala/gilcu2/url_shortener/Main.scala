@@ -37,10 +37,11 @@ object Main {
         .newServerAt(HttpConfig.host, HttpConfig.port)
         .bind(router.routes)
 
-      Behaviors.receiveSignal {
-        case (_, Terminated(_)) =>
-          Behaviors.stopped
-      }
+      //      Behaviors.receiveSignal {
+      //        case (_, Terminated(_)) =>
+      //          Behaviors.stopped
+      //      }
+      Behaviors.empty
     }
 
   def main(args: Array[String]): Unit = {
