@@ -43,5 +43,4 @@ class ServerTest extends AsyncFlatSpec with GivenWhenThen {
     })
     succeed
   }
-
 }

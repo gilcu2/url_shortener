@@ -51,6 +51,4 @@ class MyShortenerTest extends AnyFlatSpec with GivenWhenThen with BeforeAndAfter
     Then("The value is the original")
     assert(retrievedUrl == url)
   }
-
 }
-

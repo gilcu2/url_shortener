@@ -54,5 +54,4 @@ class IdGeneratorTest extends AnyFlatSpec with GivenWhenThen with BeforeAndAfter
     Then("it must be crescent")
     sequence.map(list => list.head.get < list.tail.head.get)
   }
-
 }

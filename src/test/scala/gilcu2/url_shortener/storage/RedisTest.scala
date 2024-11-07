@@ -63,6 +63,4 @@ class RedisRestartTest extends AnyFlatSpec with GivenWhenThen with BeforeAndAfte
     Then("The value is the original")
     assert(result.contains(value))
   }
-
-
 }

@@ -6,7 +6,7 @@ enablePlugins(DockerPlugin)
 name := "url_shortener"
 organization := "gilcu2"
 version := "0.2.0"
-scalaVersion := "3.1.3"
+scalaVersion := "3.3.4"
 
 libraryDependencies ++= {
   val akkaHttpV = "10.2.10"
@@ -17,7 +17,7 @@ libraryDependencies ++= {
   val rediscalaVersion = "1.9.0"
   val scalaLoggingVersion = "3.9.4"
   val picoHashidsVersion = "4.5.153"
-  val logbackVersion = "1.2.11"
+  val logbackVersion = "1.4.12"
 
 
   Seq(
