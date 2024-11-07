@@ -54,18 +54,15 @@ object Main extends LazyLogging {
       println(s"Server listening on http://${HttpConfig.host}:${HttpConfig.port}")
 
 
-      //      Behaviors.receiveSignal {
-      //        case (_, Terminated(_)) =>
-      //          Behaviors.stopped
-      //      }
-
       bindingFuture.onComplete {
         case Success(x) => logger.info(s"Server bind ok $x")
         case Failure(t) => logger.error(s"Server bind failure  $t")
       }
-      StdIn.readLine()
 
-      Behaviors.empty
+      Behaviors.receiveSignal {
+        case (_, Terminated(_)) =>
+          Behaviors.stopped
+      }
     }
 
   def runHelloApp(): Unit = {
