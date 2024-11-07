@@ -36,7 +36,14 @@ sbt run
 
 In other terminal:
 
+```shell
+$ ./bin/post_url.sh http://example.com/llll
+R9o-p
+$ ./bin/get_original.sh R9o-p
+The requested resource temporarily resides under <a href="http://example.com/llll">this URI</a>
+```
 bin/post_url.sh http://example.com/lalala  # Get the short url printed out
+
 bin/get_original.sh \<short url>  # Print the original
 
 ## Proposal
