@@ -6,7 +6,7 @@ Design and implement a URL shortener HTTP service that fulfills the following cr
 
 * Provides an HTTP API to:
   * Shorten a URL
-  * Redirect to the long URL from the shortened URL
+  * Redirect to the original URL from the shortened URL
 * Shortened URL requirements:
   * The ID of the shortened URL needs to be unique (across past and concurrent requests)
   * The ID of the shortened URL should be as short as possible (max. 8 characters long)
